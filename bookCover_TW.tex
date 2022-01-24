@@ -27,6 +27,15 @@
 \usepackage[english]{babel}
 \usepackage{kantlipsum,microtype}
 
+% Chinese
+\usepackage{xeCJK} % for Chinese, compiling by XeLaTex
+
+\usepackage{fontspec} %設定字體
+% Fandol font (the default)  not shown "內"
+\setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
+%BiauKai} %標楷體 from macOS %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
+
+
 \begin{document}
 
 \begin{bookcover}
@@ -62,35 +71,63 @@
 
 % Picture on the front cover behind the title
 \begin{bookcoverelement}{center}{front}
-    \includegraphics{watermarkTMU.jpg}
+    %\includegraphics{watermarkTMU.jpg}
     %{./figures/bookcover-cards.pdf}
 \end{bookcoverelement}
 
 % Author and title on the front cover
-\begin{bookcoverelement}{normal}{front}[,,,5cm]
+\begin{bookcoverelement}{normal}{front}[,,,2cm]
     \centering % yellow!60!
     \color{black}\sffamily\bfseries
-    \resizebox{!}{5mm}{
-    %\contour{black}{}
-    Taipei Medical University}\\[20mm]
-    \resizebox{!}{7mm}{%\contour{black}{}
-    Translational Medicine
-    }\\[6mm]
     \resizebox{!}{7mm}{
-    Dissertation of Doctor of Philosophy
+        臺北醫學大學}\\[3mm]
+    \resizebox{!}{7mm}{%\contour{black}{}
+        轉譯醫學博士學位學程
+    }\\[3mm]
+    \resizebox{!}{7mm}{
+        博士論文
     %The Ph.D. Program for 
-    }\\[110mm]
+    }\\[3mm]
+    \resizebox{!}{5mm}{
+    Taipei Medical University}\\[3mm]
+    \resizebox{!}{5mm}{%\contour{black}{}
+    The Ph.D. Program
+    }\\[3mm]
+    \resizebox{!}{5mm}{%\contour{black}{}
+    for Translational Medicine
+    }\\[4mm]
+    \resizebox{!}{5mm}{
+    Doctoral Dissertation
+    %The Ph.D. Program for 
+    }\\[15mm]
     \parbox{160mm}{ %linewidth=
-    {\bfseries\large 
-    Global Transcriptomics and Proteomics Analyses for Biomarker Identification and Validation in Head and Neck Squamous Cell Carcinoma}}\\[40mm]
+    {\bfseries\Huge
+    以全基因轉錄組和蛋白質體分析來鑑定\\[2mm]
+    驗證頭頸部鱗狀上皮細胞癌的生物標記\\[7mm]
+    Global Transcriptomics and Proteomics Analyses for Biomarker Identification and Validation in Head and Neck Squamous Cell Carcinoma}}\\[10mm]
+    \resizebox{!}{9mm}{
+    研究生:祁力行撰}\\[2mm]
     \resizebox{!}{5mm}{
-    Author: Li-Hsing Chi}\\[5mm]
+    Graduate Student: Li-Hsing Chi}\\[4mm]
+    \resizebox{!}{9mm}{
+    指導教授:李友專教授}\\[2mm]
     \resizebox{!}{5mm}{
-    Advisors: 
-    Yu-Chuan (Jack) Li,
-    Michael Hsiao}\\[7mm]
+    Advisor: 
+    Yu-Chuan (Jack) Li, M.D. Ph.D.}\\[7mm]
+    \resizebox{!}{9mm}{
+    指導教授: 蕭宏昇博士}\\[2mm]
     \resizebox{!}{5mm}{
-    \small 2022.01}\\[26mm]
+    Advisor:
+    Michael Hsiao, D.V.M., Ph.D.}\\[7mm]
+    \resizebox{!}{9mm}{
+    共同指導教授:吳駿翃副教授}\\[2mm]
+    \resizebox{!}{5mm}{
+    Co-Advisor: 
+    Alexander Jun-Hong Wu, Ph.D.}\\[10mm]
+    \resizebox{!}{7mm}{
+    \small 中華民國一百一十一年元月}\\[2mm]
+    \resizebox{!}{5mm}{
+    \small 2022.01}%\\[26mm]
 
 %\author{Li-Hsing Chi}
 %\degreemonth{January}
@@ -109,13 +146,35 @@
 
 
 % Title on the spine
-\begin{bookcoverelement}{center rotate}{spine}
+\begin{bookcoverelement}{normal}{spine}[3mm,0mm,0mm,7mm]
+% center rotate
     %\color{yellow!60!black}
-    \huge\sffamily\bfseries
     %\contour{black}
-    {Li-Hsing Chi -- Bioinformatic Study of HNSCC -- 2022.01}
+\rotatebox[origin=c]{-90}{\large\sffamily\bfseries
+\parbox{55mm}{
+臺北醫學大學\\
+轉譯醫學博士學位學程}\\
+\parbox{40mm}{
+{\huge 博士論文}}
+\parbox{90mm}{
+以全基因轉錄組和蛋白質體分析來鑑定\\
+驗證頭頸部鱗狀上皮細胞癌的生物標記}
+\parbox{40mm}{
+{\huge 祁力行撰}}
+\parbox{70mm}{
+中華民國一百一十一年元月}
+}
+%    {Li-Hsing Chi -- Bioinformatic Study of HNSCC -- 2022.01}
 \end{bookcoverelement}
 
+
+
+
+
+
+\end{bookcover}
+
+\end{document}
 %%
 % Text on the back cover
 \begin{bookcoverelement}{normal}{back}[2cm,2cm,2cm,2cm]
@@ -159,7 +218,3 @@ Fc Fragment of IgG Binding Protein (FCGBP)
 %\begin{bookcoverelement}{normal}{back flap}[1cm,2cm,1cm,2cm]
 %    \color{white}\kant[3]
 %\end{bookcoverelement}
-
-\end{bookcover}
-
-\end{document}
