@@ -34,7 +34,7 @@
 % Fandol font (the default)  not shown "內"
 \setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
 %BiauKai} %標楷體 from macOS %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
-
+%\setCJKmainfont[Vertical=RotatedGlyphs]{AR PL UMing TW MBE}
 
 \begin{document}
 
@@ -146,23 +146,62 @@
 
 
 % Title on the spine
-\begin{bookcoverelement}{normal}{spine}[4mm,0mm,0mm,7mm]
+\begin{bookcoverelement}{normal}{spine}[4.5mm,0mm,0mm,0mm]
 % center rotate
     %\color{yellow!60!black}
     %\contour{black}
-\rotatebox[origin=c]{-90}{\large\sffamily\bfseries
-\parbox{55mm}{
-臺北醫學大學\\
-轉譯醫學博士學位學程}\\
-\parbox{40mm}{
-{\huge 博士論文}}
-\parbox{90mm}{
-以全基因轉錄組和蛋白質體分析來鑑定\\
-驗證頭頸部鱗狀上皮細胞癌的生物標記}
-\parbox{40mm}{
-{\huge 祁力行撰}}
-\parbox{70mm}{
-中華民國一百一十一年元月}
+\rotatebox[origin=c]{0}{\large\sffamily\bfseries
+% or rotate -90
+\parbox{30mm}{ %55
+轉臺\\
+譯北\\
+醫醫\\
+學學\\
+博大\\
+士學\\
+學\\
+位\\
+學\\
+程\\[5mm]
+%\parbox{40mm}{
+{\huge \hspace{10mm} 
+博\\
+士\\
+論\\
+文}\\[3mm]
+%\parbox{90mm}{
+驗以\\
+證全\\
+頭基\\
+頸因\\
+部轉\\
+鱗錄\\
+狀組\\
+上和\\
+皮蛋\\
+細白\\
+胞質\\
+癌體\\
+的分\\
+生析\\
+物來\\
+標鑑\\
+記定\\[5mm]
+%\parbox{40mm}{
+{\huge \hspace{25mm}
+祁\\
+力\\
+行\\
+撰}\\[5mm]
+%\parbox{70mm}{
+一中\\
+百華\\
+一民\\
+十國\\
+一\\
+年\\
+元\\
+月} % end of parabox
 }
 %    {Li-Hsing Chi -- Bioinformatic Study of HNSCC -- 2022.01}
 \end{bookcoverelement}
