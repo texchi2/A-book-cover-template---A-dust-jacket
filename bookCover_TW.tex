@@ -1,15 +1,17 @@
 % User guide: http://mirrors.ctan.org/macros/latex/contrib/bookcover/bookcover.pdf
 % A4 size 210 x 297 mm
+% shenweis685@gmail.com
+% 做封面寬(210+210+書背厚度 17.8mm)X 高29.7公分; 上下留白各2-3公分
 \documentclass[
-    coverwidth=213mm, %150mm,
-    coverheight=303mm, %200mm,
+    coverwidth=210mm, %213mm, %150mm,
+    coverheight=297mm, %303mm, %200mm,高29.7公分
     spinewidth=17.8mm, % 289 pages, 米色道林紙 100g
 %    flapwidth=6cm,
 %    wrapwidth=5mm,
 %    trimmed % Show only trimmed part!
-    bleedwidth=3mm,
+%    bleedwidth=3mm,
     12pt,
-    trimmed=false
+    trimmed=false %true
     ]{bookcover}
 
 %\bookcovertrimmedpart{front} % Trimmed part is the front cover
@@ -76,7 +78,7 @@
 \end{bookcoverelement}
 
 % Author and title on the front cover
-\begin{bookcoverelement}{normal}{front}[,,,2cm]
+\begin{bookcoverelement}{normal}{front}[,3cm,,3cm]
     \centering % yellow!60!
     \color{black}\sffamily\bfseries
     \resizebox{!}{7mm}{
@@ -99,34 +101,34 @@
     \resizebox{!}{5mm}{
     Doctoral Dissertation
     %The Ph.D. Program for 
-    }\\[15mm]
+    }\\[10mm]
     \parbox{160mm}{ %linewidth=
-    {\bfseries\Huge
+    {\bfseries\huge
     以全基因轉錄組和蛋白質體分析來鑑定\\[2mm]
-    驗證頭頸部鱗狀上皮細胞癌的生物標記\\[7mm]
-    Global Transcriptomics and Proteomics Analyses for Biomarker Identification and Validation in Head and Neck Squamous Cell Carcinoma}}\\[10mm]
-    \resizebox{!}{9mm}{
-    研究生:祁力行撰}\\[2mm]
-    \resizebox{!}{5mm}{
-    Graduate Student: Li-Hsing Chi}\\[4mm]
-    \resizebox{!}{9mm}{
-    指導教授:李友專教授}\\[2mm]
-    \resizebox{!}{5mm}{
-    Advisor: 
-    Yu-Chuan (Jack) Li, M.D., Ph.D.}\\[7mm]
-    \resizebox{!}{9mm}{
-    指導教授: 蕭宏昇博士}\\[2mm]
-    \resizebox{!}{5mm}{
-    Advisor:
-    Michael Hsiao, D.V.M., Ph.D.}\\[7mm]
-    \resizebox{!}{9mm}{
-    共同指導教授:吳駿翃副教授}\\[2mm]
-    \resizebox{!}{5mm}{
-    Co-Advisor: 
-    Alexander Jun-Hong Wu, Ph.D.}\\[10mm]
+    驗證頭頸部鱗狀上皮細胞癌的生物標記\\[4mm]
+    Global Transcriptomics and Proteomics Analyses for Biomarker Identification and Validation in Head and Neck Squamous Cell Carcinoma}}\\[7mm]
     \resizebox{!}{7mm}{
+    研究生:祁力行撰}\\[2mm]
+    \resizebox{!}{4mm}{
+    Graduate Student: Li-Hsing Chi}\\[4mm]
+    \resizebox{!}{7mm}{
+    指導教授:李友專教授}\\[2mm]
+    \resizebox{!}{4mm}{
+    Advisor: 
+    Yu-Chuan (Jack) Li, M.D., Ph.D.}\\[4mm]
+    \resizebox{!}{7mm}{
+    指導教授: 蕭宏昇博士}\\[2mm]
+    \resizebox{!}{4mm}{
+    Advisor:
+    Michael Hsiao, D.V.M., Ph.D.}\\[4mm]
+    \resizebox{!}{7mm}{
+    共同指導教授:吳駿翃副教授}\\[2mm]
+    \resizebox{!}{4mm}{
+    Co-Advisor: 
+    Alexander Jun-Hong Wu, Ph.D.}\\[7mm]
+    \resizebox{!}{6mm}{
     \small 中華民國一百一十一年元月}\\[2mm]
-    \resizebox{!}{5mm}{
+    \resizebox{!}{4mm}{
     \small 2022.01}%\\[26mm]
 
 %\author{Li-Hsing Chi}
@@ -146,7 +148,7 @@
 
 
 % Title on the spine
-\begin{bookcoverelement}{normal}{spine}[4.5mm,0mm,0mm,0mm]
+\begin{bookcoverelement}{normal}{spine}[4.5mm,30mm,0mm,21mm]
 % center rotate
     %\color{yellow!60!black}
     %\contour{black}
@@ -162,13 +164,12 @@
 學\\
 位\\
 學\\
-程\\[5mm]
+程\\[3mm]
 %\parbox{40mm}{
 { \hspace{10mm} 
-博\\
-士\\
-論\\
-文}\\[3mm]
+論博\\
+文士
+}\\[3mm]
 %\parbox{90mm}{
 驗以\\
 證全\\
@@ -186,22 +187,22 @@
 生析\\
 物來\\
 標鑑\\
-記定\\[5mm]
+記定\\[3mm]
 %\parbox{40mm}{
 { \hspace{25mm}
 祁\\
 力\\
-行\\
-撰}\\[5mm]
+行
+}\\[3mm]
 %\parbox{70mm}{
 一中\\
-百華\\
+十華\\
 一民\\
-十國\\
-一\\
-年\\
-元\\
-月} % end of parabox
+年國\\
+元一\\
+月百\\
+\
+} % end of parabox
 }
 %\parbox{30mm}{\indent 祁}
 %    {Li-Hsing Chi -- Bioinformatic Study of HNSCC -- 2022.01}
